@@ -3,6 +3,8 @@
 
     --eu-bg: light-dark(#ffffff, #0f172a);
     --eu-surface: light-dark(#dddddd, #222222);
+    --eu-text: light-dark(#000000, #ffffff);
+    --eu-text-muted: light-dark(#555555, #aaaaaa);
     --eu-separation: light-dark(#bbbbbb, #333333);
 }
 
