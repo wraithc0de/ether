@@ -1,0 +1,15 @@
+:root {
+    color-scheme: light dark;
+
+    --eu-bg: light-dark(#ffffff, #0f172a);
+    --eu-surface: light-dark(#dddddd, #222222);
+    --eu-separation: light-dark(#bbbbbb, #333333);
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+}

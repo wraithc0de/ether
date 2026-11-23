@@ -1,3 +1,20 @@
 {
-  "name": "ether-ui"
+  "name": "@ether/ui",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./cdn": "./dist/cdn.js",
+    "./divider": "./src/components/divider/ether-divider.js"
+  },
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --minify --format=esm --outfile=dist/cdn.js"
+  },
+  "peerDependencies": {
+    "lit": "^3.3.3"
+  },
+  "sideEffects": [
+    "**/*.js"
+  ]
 }
