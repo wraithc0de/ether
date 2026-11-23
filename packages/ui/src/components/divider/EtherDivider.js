@@ -17,7 +17,7 @@ export class EtherDivider extends LitElement {
                 justify-content: center;
             }
             :host([orientation="vertical"]) {
-                display: inline-flex;
+                display: flex;
                 height: 100%;
                 width: fit-content;
             }
@@ -26,7 +26,7 @@ export class EtherDivider extends LitElement {
                 width: var(--_size, 80%);
                 height: 1px;
                 background: var(--eu-separation);
-                margin: 1rem;
+                margin: 1rem 0;
             }
             hr.vertical {
                 width: 1px;
