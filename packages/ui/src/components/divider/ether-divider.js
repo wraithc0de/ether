@@ -1,7 +1,7 @@
 import { EtherDivider } from "./EtherDivider.js";
 
-if (!customElements.get('ether-divider')) {
-    customElements.define('ether-divider', EtherDivider);
+if (!customElements.get('eu-divider')) {
+    customElements.define('eu-divider', EtherDivider);
 }
 
 export { EtherDivider };
