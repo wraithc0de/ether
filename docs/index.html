@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Ether</title>
+        <title>UI Documentation</title>
+
+        <link rel="stylesheet" href="../packages/ui/src/tokens/index.css">
+        <script type="importmap">
+            {
+                "imports": {
+                    "lit": "https://cdn.jsdelivr.net/npm/lit@3.3.3/+esm"
+                }
+            }
+        </script>
+        <script type="module" src="../packages/ui/src/index.js"></script>
+
+        <style>
+            body {font-family: sans-serif;}
+        </style>
     </head>
     <body>
-        <h2>Docs Homepage</h2>
-        <a href="./ui/">UI Documentation</a><br/>
-        <a href="./icons/">Icons Documentation</a>
+        <eu-nav type="top">
+            <eu-logo src="">Ether</eu-logo>
+            <eu-spacer></eu-spacer>
+            <eu-segmented-control default="2" type="compact">
+                <button><eu-icon>sun</eu-icon></button>
+                <button><eu-icon>system-theme</eu-icon></button>
+                <button><eu-icon>moon</eu-icon></button>
+            </eu-segmented-control>
+            <eu-button type="subtle">Icons</eu-button>
+            <eu-button type="subtle">Docs</eu-button>
+            <eu-button type="subtle"><eu-icon>github</eu-icon></eu-button>
+            <eu-dropdown type="button-primary">
+                <span slot="label">Download</span>
+                <eu-dropdown-content slot="content">
+                    <eu-button type="flush"><eu-icon>website</eu-icon> UI</eu-button>
+                    <eu-button type="flush"><eu-icon>check</eu-icon> Icons</eu-button>
+                    <eu-button type="ghost">Link via CDN</eu-button>
+                </eu-dropdown-content>
+            </eu-dropdown>
+        </eu-nav>
+        <eu-layout orientation="horizontal" >
+            <eu-tree slot="left" icon="tree-ui" name="Navigation">
+                <eu-tree-section>
+                    <span slot="name">Ether UI</span>
+                    <eu-tree-item>Introduction</eu-tree-item>
+                    <eu-tree-folder>
+                        <span slot="label">Getting Started</span>
+                        <eu-tree-item>Installation</eu-tree-item>
+                        <eu-tree-item>Download</eu-tree-item>
+                        <eu-tree-item>Customize</eu-tree-item>
+                    </eu-tree-folder>
+                </eu-tree-section>
+            </eu-tree>
+            <main slot="right">
+
+            </main>
+        </eu-layout>
     </body>
 </html>

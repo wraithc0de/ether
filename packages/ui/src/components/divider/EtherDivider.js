@@ -27,7 +27,7 @@ export class EtherDivider extends LitElement {
          * @type {boolean}
          */
         dashed: { type: Boolean },
-
+        /** @internal */
         _hasLabel: { state: true}
     }
 
