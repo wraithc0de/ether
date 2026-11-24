@@ -1,0 +1,60 @@
+@font-face {
+  font-display: block;
+  font-family: "ether-icons";
+  src: url("../fonts/ether-icons.woff2?fe657a8cb4a3ae9769a089e0885f1ce0") format("woff2"),
+url("../fonts/ether-icons.woff?fe657a8cb4a3ae9769a089e0885f1ce0") format("woff");
+}
+
+i[class^="ei-"]::before, i[class*=" ei-"]::before {
+  font-family: ether-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ei-check::before {
+  content: "\f101";
+}
+.ei-download::before {
+  content: "\f102";
+}
+.ei-export::before {
+  content: "\f103";
+}
+.ei-gear::before {
+  content: "\f104";
+}
+.ei-layout::before {
+  content: "\f105";
+}
+.ei-link::before {
+  content: "\f106";
+}
+.ei-list-bullet::before {
+  content: "\f107";
+}
+.ei-menu-hamburger::before {
+  content: "\f108";
+}
+.ei-menu-meatball::before {
+  content: "\f109";
+}
+.ei-moon-stars::before {
+  content: "\f10a";
+}
+.ei-moon::before {
+  content: "\f10b";
+}
+.ei-sun::before {
+  content: "\f10c";
+}
+.ei-tree::before {
+  content: "\f10d";
+}
+.ei-ui-tree::before {
+  content: "\f10e";
+}

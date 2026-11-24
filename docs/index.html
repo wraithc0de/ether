@@ -40,12 +40,12 @@
             </eu-dropdown>
         </eu-nav>
         <eu-layout orientation="horizontal" sections="static-fill-static">
-            <eu-tree pagescontainer="#doc-content">
+            <eu-tree pages="#doc-content" active="ui-introduction">
                 <span slot="label"><eu-icon>ui-tree</eu-icon> Navigation</span>
-                <eu-tree-section>
+                <eu-tree-section name="ui">
                     <span slot="label">Ether UI</span>
-                    <eu-tree-item topage="introduction">Introduction</eu-tree-item>
-                    <eu-tree-folder>
+                    <eu-tree-item topage="introduction" active>Introduction</eu-tree-item>
+                    <eu-tree-folder name="gettingStarted" open>
                         <span slot="label">Getting Started</span>
                         <eu-tree-item topage="ui-installation">Installation</eu-tree-item>
                         <eu-tree-item topage="ui-download">Download</eu-tree-item>
@@ -54,16 +54,16 @@
                 </eu-tree-section>
             </eu-tree>
             <eu-pages id="doc-content" default="introduction" active="introduction">
-                <section name="introduction">
+                <section name="ui-introduction">
                     <!-- Page content -->
                 </section>
-                <section name="ui-installation">
+                <section name="ui-gettingStarted-installation">
                     <!-- Page content -->
                 </section>
-                <section name="ui-download">
+                <section name="ui-gettingStarted-download">
                     <!-- Page content -->
                 </section>
-                <section name="ui-customize">
+                <section name="ui-gettingStarted-customize">
                     <!-- Page content -->
                 </section>
             </eu-pages>

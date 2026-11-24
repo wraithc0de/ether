@@ -1,3 +1,8 @@
 {
-  "name": "ether-icons"
+  "name": "@ether/icons",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js"
+  }
 }
