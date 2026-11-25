@@ -17,12 +17,12 @@ export class EtherIcon extends LitElement {
         this._name = '';
     }
 
-    // Disable Shadow DOM so <head> CSS works automatically
+    // disable shadow dom so user just has to link icons in head
     createRenderRoot() {
         return this;
     }
 
-    // Capture the inner text before Lit overwrites the element's children
+    // get inner text before lit overwrites children
     connectedCallback() {
         super.connectedCallback();
         if (!this._name) {

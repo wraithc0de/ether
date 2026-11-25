@@ -9,7 +9,7 @@
     "./divider": "./src/components/divider/ether-divider.js"
   },
   "scripts": {
-    "build": "esbuild src/index.js --bundle --minify --format=esm --outfile=dist/cdn.js"
+    "build": "node scripts/build.js"
   },
   "peerDependencies": {
     "lit": "^3.3.3"

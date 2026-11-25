@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/styles/tokens/colors.css", "../../src/styles/index.css"],
+  "sourcesContent": [":root {\r\n    color-scheme: light dark;\r\n\r\n    --eu-bg: light-dark(#ffffff, #0f172a);\r\n    --eu-surface: light-dark(#dddddd, #222222);\r\n    --eu-text: light-dark(#000000, #ffffff);\r\n    --eu-text-muted: light-dark(#555555, #aaaaaa);\r\n    --eu-separation: light-dark(#bbbbbb, #333333);\r\n}\r\n\r\n:root[data-theme=\"light\"] {\r\n    color-scheme: light;\r\n}\r\n\r\n:root[data-theme=\"dark\"] {\r\n    color-scheme: dark;\r\n}", "@import 'tokens/index.css';\r\n\r\n* {box-sizing: border-box;}\r\n\r\nbody {\r\n    margin: 0;\r\n    width: 100vw;\r\n    height: 100vh;\r\n}"],
+  "mappings": "AAAA,MACI,aAAc,MAAM,KAEpB,SAAS,WAAW,OAAO,EAAE,SAC7B,cAAc,WAAW,OAAO,EAAE,SAClC,WAAW,WAAW,OAAO,EAAE,SAC/B,iBAAiB,WAAW,OAAO,EAAE,SACrC,iBAAiB,WAAW,OAAO,EAAE,QACzC,CAEA,KAAK,CAAC,kBACF,aAAc,KAClB,CAEA,KAAK,CAAC,iBACF,aAAc,IAClB,CCdA,EAAG,WAAY,UAAW,CAE1B,KAJA,OAKY,EACR,MAAO,MACP,OAAQ,KACZ",
+  "names": []
+}
