@@ -1,4 +1,6 @@
 import { LitElement, html, css } from 'lit';
+import { base } from '../../styles/base.js';
+import { styles } from './styles.js';
 
 /**
  * An element used to display an icon from Ether Icons.
@@ -11,6 +13,8 @@ export class EtherIcon extends LitElement {
     static properties = {
         _name: { state: true }
     };
+
+    static styles = [base, styles];
 
     constructor() {
         super();

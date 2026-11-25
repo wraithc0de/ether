@@ -6,6 +6,8 @@
     --eu-text: light-dark(#000000, #ffffff);
     --eu-text-muted: light-dark(#555555, #aaaaaa);
     --eu-separation: light-dark(#bbbbbb, #333333);
+    --eu-primary: light-dark(#6262f9, #242479);
+    --eu-hover: light-dark(#00000011, #ffffff11);
 }
 
 :root[data-theme="light"] {
