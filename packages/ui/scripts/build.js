@@ -1,4 +1,5 @@
 import * as esbuild from 'esbuild';
+import { minifyHTMLLiteralsPlugin } from 'esbuild-plugin-minify-html-literals';
 import fs from 'node:fs';
 
 // clean and recreate dist folder
@@ -14,7 +15,21 @@ await esbuild.build({
     minify: true,
     sourcemap: true,
     format: 'esm',
-    outdir: 'dist'
+    outdir: 'dist',
+    plugins: [
+        minifyHTMLLiteralsPlugin({
+            minifyOptions: {
+                conservativeCollapse: true,
+                minifyCSS: (text) => {
+                    return esbuild.transformSync(text, {
+                        loader: 'css',
+                        minify: true
+                    }).code.trim();
+                },
+                removeEmptyAttributes: false
+            }
+        })
+    ]
 });
 
 console.log('complete');
