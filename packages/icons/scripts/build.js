@@ -26,6 +26,8 @@ async function build() {
     await SVGFixer(SRC_DIR, FIXED_DIR).fix();
 
     // compile font, css, and json
+    const previewPath = path.join(DIST_DIR, 'preview/index.html');
+    const cssPath = path.join(DIST_DIR, 'css/ether-icons.css');
     console.log('generating font');
     await generateFonts({
         inputDir: FIXED_DIR,
@@ -37,14 +39,19 @@ async function build() {
         normalize: true,
         fontsUrl: '../fonts',
         pathOptions: {
-            css: path.join(DIST_DIR, 'css/ether-icons.css'),
-            html: path.join(DIST_DIR, 'preview/index.html'),
+            css: cssPath,
+            html: previewPath,
             json: path.join(DIST_DIR, 'ether-icons.json')
         }
     });
     // fix stylesheet path in preview
-    const previewPath = path.join(DIST_DIR, 'preview/index.html');
     fs.writeFileSync(previewPath, fs.readFileSync(previewPath, 'utf8').replace('href="ether-icons.css"', 'href="../css/ether-icons.css"'));
+
+    // fix icons' vertical alignment in stylesheet
+    fs.writeFileSync(
+        cssPath,
+        fs.readFileSync(cssPath, 'utf8').replace('line-height: 1;', 'line-height: 1;\n  vertical-align: -0.125em;')
+    );
 
     // put compiled assets into site's icons page as well
     console.log('syncing with site');
