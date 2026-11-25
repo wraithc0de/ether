@@ -14,13 +14,20 @@ export class EtherButton extends LitElement {
          * The type of button.
          * @type {'primary' | 'secondary' | 'ghost' | 'flush'}
          */
-        type: { type: String }
+        type: { type: String },
+        /**
+         * Where the button content is anchored.
+         * @type {'left' | 'center' | 'right'}
+         */
+        align: { type: String }
     }
 
     static styles = [base, styles];
 
     constructor() {
         super();
+        this.type = 'primary';
+        this.align = 'center';
     }
 
     render() {
