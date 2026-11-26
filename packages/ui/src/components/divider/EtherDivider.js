@@ -7,9 +7,13 @@ import { styles } from './styles.js';
  * 
  * @tagname eu-divider
  * @slot - Optional text displayed in the center of the divider.
- * @cssprop [--eu-separation] - Color of the divider line.
- * @cssprop [--eu-text-muted] - Color of the optional text.
- * @csspart base - The internal `<hr>` element.
+ * 
+ * @cssprop [--eu-dv-line-color=var(--eu-separation)] - Color of the divider line.
+ * @cssprop [--eu-dv-line-thickness=1px] - Thickness of the divider line.
+ * @cssprop [--eu-dv-text-color=var(--eu-text-muted)] - Color of the optional label text.
+ * @cssprop [--eu-dv-text-size=var(--eu-text-md)] - Font size of the optional label text.
+ * @cssprop [--eu-dv-length=80%] - Width (horizontal) or height (vertical) of the divider wrapper.
+ * @cssprop [--eu-dv-margin=var(--eu-space-5)] - Outer spacing perpendicular to the divider line.
  */
 
 export class EtherDivider extends LitElement {
@@ -19,11 +23,6 @@ export class EtherDivider extends LitElement {
          * @type {'horizontal' | 'vertical'}
          */
         orientation: { type: String },
-        /**
-         * Length of the divider (e.g., `"80%"`, `"200px"`, or `"50"`). A number with no unit is interpreted as a percentage.
-         * @type {string}
-         */
-        size: { type: String },
         /**
          * Renders the divider as a dashed line instead of solid.
          * @type {boolean}
@@ -49,14 +48,13 @@ export class EtherDivider extends LitElement {
     }
 
     render() {
-        const s = /^\d+$/.test(this.size) ? `${this.size}%` : this.size;
         const classes = [
             this.dashed ? 'dashed' : '',
             this.orientation === 'vertical' ? 'vertical' : ''
         ].filter(Boolean).join(' ');
 
         return html`
-            <div class="wrapper ${this.orientation}" style="--_size: ${s}">
+            <div class="wrapper ${this.orientation}">
                 <hr part="base" class="${classes}">
                 <span class="label" ?hidden=${!this._hasLabel}>
                     <slot @slotchange=${this._onSlotChange}></slot>

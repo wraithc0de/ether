@@ -7,6 +7,13 @@ export const styles = css`
         align-items: center;
         justify-content: center;
         height: auto;
+
+        --_line-color: var(--eu-dv-line-color, var(--eu-separation));
+        --_line-thickness: var(--eu-dv-line-thickness, 1px);
+        --_text-color: var(--eu-dv-text-color, var(--eu-text-muted));
+        --_text-size: var(--eu-dv-text-size, var(--eu-text-md));
+        --_size: var(--eu-dv-length, 80%);
+        --_margin: var(--eu-dv-margin, var(--eu-space-5));
     }
 
     :host([orientation="vertical"]) {
@@ -25,39 +32,39 @@ export const styles = css`
             flex-direction: column;
 
             .label {
-                padding: 0.75rem 0;
+                padding: var(--eu-space-4) 0;
             }
         }
 
         hr {
             border: none;
-            width: var(--_size, 80%);
-            height: 1px;
-            background: var(--eu-separation);
-            margin: 1rem 0;
+            width: 100%;
+            height: var(--_line-thickness);
+            background: var(--_line-color);
+            margin: var(--_margin) 0;
 
             &.vertical {
-                width: 1px;
-                height: var(--_size, 80%);
-                margin: 0 1rem;
+                width: var(--_line-thickness);
+                height: 100%;
+                margin: 0 var(--_margin);
 
                 &.dashed {
                     border-top: none;
-                    border-left: 1px dashed var(--eu-separation);
+                    border-left: var(--_line-thickness) dashed var(--_line-color);
                 }
             }
             
             &.dashed {
                 background: none;
-                border-top: 1px dashed var(--eu-separation);
+                border-top: var(--_line-thickness) dashed var(--_line-color);
             }
         }
         
         .label {
-            color: var(--eu-text-muted);
-            padding: 0 0.75rem;
+            color: var(--_text-color);
+            padding: 0 var(--eu-space-4);
             white-space: nowrap;
-            font-size: 0.em;
+            font-size: var(--_text-size);
         }
     }
 `;
