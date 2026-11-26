@@ -30,7 +30,7 @@ export class EtherButton extends LitElement {
         type: { type: String, reflect: true },
         /**
          * Where the button content is anchored.
-         * @type {'left' | 'center' | 'right'}
+         * @type {'start' | 'center' | 'end' | 'between'}
          */
         align: { type: String, reflect: true }
     }

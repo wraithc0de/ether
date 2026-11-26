@@ -36,16 +36,19 @@ export const styles = css`
     }
 
     /* ALIGN attr */
-    :host([align="left"]) {justify-content: flex-start;}
-    :host([align="right"]) {justify-content: flex-end;}
+    :host([align="start"]) {justify-content: flex-start;}
+    :host([align="end"]) {justify-content: flex-end;}
+    :host([align="between"]) {justify-content: space-between;}
 
     /* TYPE attr */
     :host(:not([type])), :host([type="primary"]) {
+        --_border-thickness: 0;
         --_bg-base: var(--eu-primary);
         --_color: var(--eu-bg);
     }
     
     :host([type="secondary"]) {
+        --_border-thickness: 0;
         --_bg-base: var(--eu-secondary);
     }
 
