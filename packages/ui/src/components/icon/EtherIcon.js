@@ -8,7 +8,6 @@ import { styles } from './styles.js';
  * @tagname eu-icon
  * @slot - Name of the icon.
  */
-
 export class EtherIcon extends LitElement {
     static properties = {
         _name: { state: true }

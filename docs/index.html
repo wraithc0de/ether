@@ -22,11 +22,10 @@
         <eu-nav type="top">
             <eu-logo src="">Ether</eu-logo>
             <eu-spacer></eu-spacer>
-            <eu-segmented-control default="2" type="compact">
-                <button><eu-icon>sun</eu-icon> Light</button>
-                <button><eu-icon>gear</eu-icon></button>
-                <button><eu-icon>moon</eu-icon></button>
-                <i class="ei ei-sun"></i> Light
+            <eu-segmented-control default="system" type="compact">
+                <button value="light"><eu-icon>sun</eu-icon></button>
+                <button value="system"><eu-icon>gear</eu-icon></button>
+                <button value="dark"><eu-icon>moon</eu-icon></button>
             </eu-segmented-control>
             <eu-button type="primary">Icons</eu-button>
             <eu-button type="subtle" align="left">Docs</eu-button>
