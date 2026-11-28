@@ -19,9 +19,9 @@
     --eu-radius-lg: 0.75rem; /* 8px */
     --eu-radius-full: 9999rem;
 
-    --eu-text-tiny: 0.5em; /* 8px */
-    --eu-text-sm: 0.75em;
-    --eu-text-md: 0.9em;
+    --eu-text-tiny: 0.5rem; /* 8px */
+    --eu-text-sm: 0.75rem;
+    --eu-text-md: 0.9rem;
     --eu-text-normal: 1rem;
-    --eu-text-lg: 1.2em;
+    --eu-text-lg: 1.2rem;
 }

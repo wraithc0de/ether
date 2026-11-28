@@ -59,4 +59,10 @@ export const styles = css`
         pointer-events: none;
         transition: transform var(--eu-transition) ease, width var(--eu-transition) ease;
     }
+
+    :host([type="primary"]) {
+        .indicator {
+            background: var(--eu-primary);
+        }
+    }
 `;

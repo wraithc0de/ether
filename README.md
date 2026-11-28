@@ -39,8 +39,8 @@ A customizable button-type element.
 
 | Attribute | Supported Values |
 |-----------|------------------|
-| `type`    | `primary` `secondary` `ghost` `subtle` `flush` |
-| `align`   | `start` `center` `end` `between` |
+| `type`    | `primary` (default) `secondary` `ghost` `subtle` `flush` |
+| `align`   | `start` `center` (default) `end` `between` |
 
 ## Divider `<eu-divider>`
 A visual separator line used to divide content horizontally or vertically.<br>
@@ -48,7 +48,7 @@ Optional slotted text displays in the center of the divider.
 
 | Attribute | Supported Values |
 |-----------|------------------|
-| `orientation` | `horizontal` `vertical` |
+| `orientation` | `horizontal` (default) `vertical` |
 | `dashed` | Exclude for solid style. |
 
 ## Segmented Control `<eu-segmented-control>`
@@ -56,7 +56,7 @@ A linear set of two or more mutually exclusive options with an active indicator.
 
 | Attribute | Supported Values |
 |-----------|------------------|
-| `type`    | `monochrome`, `primary` |
+| `type`    | `monochrome` (default) `primary` |
 | `default` | Any existing button value or index. |
 | `value`   | Any existing button value or index. Can be read and changed programmatically. |
 
