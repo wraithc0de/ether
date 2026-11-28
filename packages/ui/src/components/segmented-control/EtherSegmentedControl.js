@@ -3,10 +3,23 @@ import { base } from '../../styles/base.js';
 import { styles } from './styles.js';
 
 /**
- * Element description.
+ * A linear set of two or more mutually exclusive options with an active indicator.
  * 
  * @tagname eu-segmented-control
+ * 
+ * @cssprop [--eu-segctrl-bg=transparent] - Background color of the segmented control container.
+ * @cssprop [--eu-segctrl-color=var(--eu-text)] - Text color of unselected options and background color of the active indicator.
+ * @cssprop [--eu-segctrl-color-active=var(--eu-bg)] - Text color of the currently selected option.
+ * @cssprop [--eu-segctrl-border=1px solid var(--eu-separation)] - Shorthand border for the container.
+ * @cssprop [--eu-segctrl-border-thickness=1px] - Border width of the container.
+ * @cssprop [--eu-segctrl-border-style=solid] - Border style of the container.
+ * @cssprop [--eu-segctrl-border-color=var(--eu-separation)] - Border color of the container.
+ * @cssprop [--eu-segctrl-radius=var(--eu-radius-md)] - Border radius for the container, options, and active indicator.
+ * @cssprop [--eu-segctrl-padding-ext=var(--eu-space-2)] - Outer padding between the container border and the options.
+ * @cssprop [--eu-segctrl-padding-int=var(--eu-space-2) var(--eu-space-3)] - Inner padding applied to each slotted button.
+ * @cssprop [--eu-segctrl-gap=var(--eu-space-1)] - Spacing between individual options.
  * @slot - Buttons/options.
+ * @fires {CustomEvent<{ value: string, index: number, button: HTMLButtonElement }>} eu-change - Fired when the selected option changes.
  */
 export class EtherSegmentedControl extends LitElement {
     static properties = {

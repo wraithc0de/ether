@@ -37,7 +37,7 @@ export const styles = css`
         border-radius: var(--_radius);
         padding: var(--_padding-int);
         cursor: pointer;
-        transition: background-color var(--eu-transition) ease, color var(--eu-transition ease);
+        transition: background-color var(--eu-transition) ease, color var(--eu-transition) ease;
     }
 
     ::slotted(button[aria-checked="false"]:hover) {
