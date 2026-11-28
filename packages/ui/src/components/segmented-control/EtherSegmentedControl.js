@@ -86,7 +86,7 @@ export class EtherSegmentedControl extends LitElement {
         if (changedProperties.has('value') && this.value !== undefined) {
             const i = this._resolveIndex(this.value);
             if (i !== -1 && i !== this._selectedIndex) {
-                this._selectedIndex = this.default;
+                this._selectedIndex = i;
                 this._syncState();
             }
         } // fallback to default index if no value was provided
@@ -105,7 +105,7 @@ export class EtherSegmentedControl extends LitElement {
         });
         // resolve initial index from value first, otherwise default
         const initialTarget = this.value !== undefined ? this.value : this.default;
-        const resolved = this._resolveIndex(initialTarget, this._buttons);
+        const resolved = this._resolveIndex(initialTarget);
         if (resolved !== -1) this._selectedIndex = resolved;
         // make sure this.value stays accurate on initial load
         if (this._buttons[this._selectedIndex] && this.value === undefined) {

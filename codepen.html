@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ether UI Demo</title>
+
+        <link rel="stylesheet" href="https://etherui.surge.sh/packages/icons/dist/css/ether-icons.css">
+        <link rel="stylesheet" href="https://etherui.surge.sh/packages/ui/dist/styles/index.css">
+        <script type="importmap">
+            {
+                "imports": {
+                    "lit": "https://cdn.jsdelivr.net/npm/lit@3.3.3/+esm"
+                }
+            }
+        </script> 
+        <script type="module" src="https://etherui.surge.sh/packages/ui/src/index.js"></script>
+        <style>
+            body { margin: 0; height: 100vh; width: 100vw; font-family: sans-serif; display: flex; flex-direction: column; gap: 0; align-items: center;}
+            eu-button:not([type="flush"]) {width: 50%;}
+            eu-segmented-control {margin-top: var(--eu-space-4);}
+        </style>
+    </head>
+    <body>
+        <eu-button type="primary" align="start">Primary</eu-button>
+        <eu-button type="secondary">Secondary</eu-button>
+        <eu-button type="ghost" align="end">Ghost</eu-button>
+        <eu-button type="subtle" align="between">Subtle <eu-icon>ui-tree</eu-icon></eu-button>
+        <eu-button type="flush">Flush</eu-button>
+        <eu-divider></eu-divider>
+        <eu-divider dashed>dashed divider, with text, custom width (see css)</eu-divider>
+        <div style="height: 120px; width: 100%; display: flex; align-items: center; flex-direction: column;">
+            <eu-divider orientation="vertical">vertical divider</eu-divider>
+        </div>
+        <div style="font-size: var(--eu-text-lg);">
+            <eu-icon>check</eu-icon>
+            <eu-icon>menu-hamburger</eu-icon>
+            <eu-icon>layout</eu-icon>
+            <eu-icon>moon-stars</eu-icon>
+            <eu-icon>link</eu-icon>
+            <eu-icon>download</eu-icon>
+        </div>
+        <eu-segmented-control default="system">
+            <button value="light"><eu-icon>sun</eu-icon> Light</button>
+            <button value="system"><eu-icon>gear</eu-icon></button>
+            <button value="dark"><eu-icon>moon</eu-icon></button>
+        </eu-segmented-control>
+        <br>
+        <eu-button type="secondary" onclick="document.querySelector('eu-segmented-control').value = '0'">Set segmented control value to "0"</eu-button>
+        <eu-button type="secondary" onclick="document.querySelector('eu-segmented-control').value = 'dark'">Set segmented control value to "dark"</eu-button>
+    </body>
+</html>
