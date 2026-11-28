@@ -56,6 +56,4 @@ Displays an icon by name, for example `<eu-icon>check</eu-icon>`. The icon font 
 
 ## Development
 
-The source components are in [`packages/ui/src`](./packages/ui/src). Run the
-workspace build commands above after making changes. The icon build generates
-font and stylesheet assets from the icon sources.
+Build instructions will be posted once complete.
