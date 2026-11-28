@@ -2,7 +2,7 @@
     color-scheme: light dark;
 
     --eu-bg: light-dark(#f0f6fa, #050b0f);
-    --eu-surface: color-mix(in oklch, var(--eu-bg) 90%, var(--eu-text));
+    --eu-surface: color-mix(in oklch, var(--eu-bg) 80%, var(--eu-text));
     --eu-text: light-dark(#080d12, #edf2f7);
     --eu-text-muted: color-mix(in oklch, var(--eu-text) 60%, transparent);
     --eu-separation: light-dark(#bbbbbb, #333333);

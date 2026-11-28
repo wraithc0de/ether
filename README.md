@@ -65,6 +65,29 @@ Its options must be buttons with an optional `value` attribute, supporting names
 ## Icon `<eu-icon>`
 Displays an icon by name, for example `<eu-icon>check</eu-icon>`. The icon font stylesheet must also be loaded. See the [icon preview](./packages/icons/dist/preview/index.html) page for currently available icons - I'll make a proper icon browser in the future.
 
+# Tokens
+Global Ether variables for spacing, colors, and timing.
+
+| Token | Default |
+|---|---|
+| Colors ||
+| `--eu-bg` | `light-dark(#f0f6fa, #050b0f)` |
+| `--eu-surface` | `color-mix(in oklch, var(--eu-bg) 80%, var(--eu-text))` |
+| `--eu-text` | `light-dark(#080d12, #edf2f7)` |
+| `--eu-text-muted` | `color-mix(in oklch, var(--eu-text) 60%, transparent)` |
+| `--eu-separation` | `light-dark(#bbbbbb, #333333)` |
+| `--eu-primary` | `light-dark(#16486f, #90c3e9)` |
+| `--eu-secondary` | `light-dark(#74bbf1, #0e558b)` |
+| `--eu-accent` | `light-dark(#0588e6, #199cfa)` |
+| `--eu-hover-dir` | `light-dark(#000000, #ffffff)` |
+| Scale & Sizing ||
+| `--eu-space-[0-8]` | `[0, 0.125, 0.25, 0.5, 0.75, 1, 1.5, 2, 4]rem` |
+| `--eu-size-[sm, md, lg]` | `[1.75, 2.25, 2.75]rem` |
+| `--eu-radius-[tiny, sm, md, lg, full]` | `[0.125, 0.25, 0.5, 0.75, 9999]rem` |
+| `--eu-text-[tiny, sm, md, normal, lg]` | `[0.5, 0.75, 0.9, 1, 1.2]rem` |
+| Utility ||
+| `--eu-transition` | `0.2s` |
+
 # Development
 
 Build instructions will be posted once complete.
